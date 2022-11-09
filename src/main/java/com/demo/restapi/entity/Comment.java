@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "comment" , uniqueConstraints = @UniqueConstraint(columnNames = "email"))
+@Table(name = "comment", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
 public class Comment {
 
     @Id
@@ -32,7 +32,7 @@ public class Comment {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnore
-    @JoinColumn(name = "post_id", referencedColumnName = "post_id")
+    @JoinColumn(name = "post_id")
     private Post post;
 
 

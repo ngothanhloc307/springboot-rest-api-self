@@ -30,6 +30,8 @@ public class Post {
     @Column(name = "content")
     private String content;
 
+    private Integer maximumOfComments;
+
     @OneToMany(mappedBy = "post", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private Set<Comment> comments;
 }
